@@ -1,17 +1,23 @@
 #include <stdio.h>
 int main()
 {
-    int year;
-    printf("Enter the year: ");
-    scanf("%d",&year);
+    int num1,num2;
+    printf("Enter the number: ");
+    scanf("%d",&num1);
+    printf("Enter the number2: ");
+    scanf("%d",&num2);
     
-    if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0))
+    if (num1 > num2 )
     {
-        printf("%d It is an leap year",year);
+        printf("%d is greater",num1);
+    }
+    else if (num2 > num1)
+    {
+        printf("%d is greater",num2);
+    }
+    else {
+        printf("both are equal");
     }
     
-    else{
-    printf("%d It is not an leap year",year);
-    }
     return 0;
 }
