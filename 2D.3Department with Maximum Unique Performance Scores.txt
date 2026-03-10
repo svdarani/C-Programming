@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main() {
+    int R, C;
+    scanf("%d %d", &R, &C);
+    
+    int mat[R][C];
+    for (int i = 0; i < R; i++)
+        for (int j = 0; j < C; j++)
+            scanf("%d", &mat[i][j]);
+    
+    int bestRow = 0, bestCount = 0;
+    
+    for (int i = 0; i < R; i++) {
+        int count = 0;
+        for (int j = 0; j < C; j++) {
+            int isUnique = 1;
+            for (int k = 0; k < C; k++) {
+                if (k != j && mat[i][k] == mat[i][j]) {
+                    isUnique = 0;
+                    break;
+                }
+            }
+            if (isUnique) count++;
+        }
+        if (count > bestCount) {
+            bestCount = count;
+            bestRow = i;
+        }
+    }
+    
+    printf("%d\n", bestRow);
+    return 0;
+}

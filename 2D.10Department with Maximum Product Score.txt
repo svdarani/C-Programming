@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    int R, C;
+    scanf("%d %d", &R, &C);
+    
+    int mat[R][C];
+    for (int i = 0; i < R; i++)
+        for (int j = 0; j < C; j++)
+            scanf("%d", &mat[i][j]);
+    
+    int bestRow = 0;
+    long long maxProd = 1;
+    
+    // Calculate first row product
+    for (int j = 0; j < C; j++)
+        maxProd *= mat[0][j];
+    
+    for (int i = 1; i < R; i++) {
+        long long prod = 1;
+        for (int j = 0; j < C; j++)
+            prod *= mat[i][j];
+        if (prod > maxProd) {
+            maxProd = prod;
+            bestRow = i;
+        }
+    }
+    
+    printf("%d\n", bestRow);
+    return 0;
+}

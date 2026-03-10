@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int R, C;
+    scanf("%d %d", &R, &C);
+    
+    int mat[R][C];
+    for (int i = 0; i < R; i++)
+        for (int j = 0; j < C; j++)
+            scanf("%d", &mat[i][j]);
+    
+    int maxProduct = mat[0][0] * mat[1][0];
+    
+    for (int j1 = 0; j1 < C; j1++) {
+        for (int j2 = 0; j2 < C; j2++) {
+            int prod = mat[0][j1] * mat[1][j2];
+            if (prod > maxProduct)
+                maxProduct = prod;
+        }
+    }
+    
+    printf("%d\n", maxProduct);
+    return 0;
+}

@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main() {
+    int R, C;
+    scanf("%d %d", &R, &C);
+    
+    int mat[R][C];
+    for (int i = 0; i < R; i++)
+        for (int j = 0; j < C; j++)
+            scanf("%d", &mat[i][j]);
+    
+    int count = 0;
+    
+    for (int i = 0; i < R; i++) {
+        for (int j = 0; j < C; j++) {
+            // Find row minimum
+            int rowMin = mat[i][0];
+            for (int k = 1; k < C; k++)
+                if (mat[i][k] < rowMin) rowMin = mat[i][k];
+            
+            // Find column maximum
+            int colMax = mat[0][j];
+            for (int k = 1; k < R; k++)
+                if (mat[k][j] > colMax) colMax = mat[k][j];
+            
+            // Saddle point: smallest in row AND largest in column
+            if (mat[i][j] == rowMin && mat[i][j] == colMax)
+                count++;
+        }
+    }
+    
+    printf("%d\n", count);
+    return 0;
+}

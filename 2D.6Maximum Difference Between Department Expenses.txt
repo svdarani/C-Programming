@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int R, C;
+    scanf("%d %d", &R, &C);
+    
+    int mat[R][C];
+    for (int i = 0; i < R; i++)
+        for (int j = 0; j < C; j++)
+            scanf("%d", &mat[i][j]);
+    
+    int rowSum[R];
+    for (int i = 0; i < R; i++) {
+        rowSum[i] = 0;
+        for (int j = 0; j < C; j++)
+            rowSum[i] += mat[i][j];
+    }
+    
+    int maxDiff = 0;
+    for (int i = 0; i < R; i++) {
+        for (int j = i + 1; j < R; j++) {
+            int diff = rowSum[i] - rowSum[j];
+            if (diff < 0) diff = -diff;
+            if (diff > maxDiff) maxDiff = diff;
+        }
+    }
+    
+    printf("%d\n", maxDiff);
+    return 0;
+}

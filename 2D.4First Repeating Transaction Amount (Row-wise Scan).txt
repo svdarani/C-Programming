@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    int R, C;
+    scanf("%d %d", &R, &C);
+    
+    int mat[R][C];
+    for (int i = 0; i < R; i++)
+        for (int j = 0; j < C; j++)
+            scanf("%d", &mat[i][j]);
+    
+    for (int i = 0; i < R; i++) {
+        for (int j = 0; j < C; j++) {
+          
+            int found = 0;
+            for (int r = i; r < R && !found; r++) {
+                int startCol = (r == i) ? j + 1 : 0;
+                for (int c = startCol; c < C && !found; c++) {
+                    if (mat[r][c] == mat[i][j]) {
+                        found = 1;
+                    }
+                }
+            }
+            if (found) {
+                printf("%d\n", mat[i][j]);
+                return 0;
+            }
+        }
+    }
+    
+    printf("-1\n");
+    return 0;
+}
