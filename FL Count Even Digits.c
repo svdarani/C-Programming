@@ -1,11 +1,11 @@
 
 #include <stdio.h>
 int main() {
-    int N,count=0;
-    scanf("%d",&N);
-    for(int temp=N; temp>0; temp/=10){
+    int S,count=0;
+    scanf("%d",&S);
+    for(int temp=S; temp>0; temp/=10){
         int digit = temp % 10;
-        if (digit % 2 ==00){
+        if (digit % 2 ==0){
             count++;
         }
     }
