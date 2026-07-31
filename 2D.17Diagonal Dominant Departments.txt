@@ -3,14 +3,14 @@ int main() {
     int R, C;
     scanf("%d %d", &R, &C);
     int mat[R][C];
-    for (int i = 0; i < R; i++)
-        for (int j = 0; j < C; j++)
+    for (int i=0; i<R; i++)
+        for (int j=0; j<C; j++)
             scanf("%d", &mat[i][j]);
     int count = 0;
     for (int i = 0; i < R; i++) {
         int diag = mat[i][i];
         int sumOthers = 0;
-        for (int j = 0; j < C; j++) {
+        for (int j=0; j<C; j++) {
             if (j != i)
                 sumOthers += mat[i][j];
         }
