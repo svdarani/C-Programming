@@ -2,11 +2,11 @@
 #include <stdio.h>
 
 int main() {
-    int A, B, LCM;
-    scanf("%d %d", &A, &B);
-    LCM = (A > B) ? A : B;
+    int X, Y, LCM;
+    scanf("%d %d", &X, &Y);
+    LCM = (X > Y) ? X : Y;
     for( ; ; LCM++) {
-        if(LCM % A == 0 && LCM % B == 0) {
+        if(LCM % X == 0 && LCM % Y == 0) {
             printf("%d\n", LCM);
             break; 
         }
