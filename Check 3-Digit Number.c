@@ -1,10 +1,10 @@
 #include <stdio.h>
 int main()
 {
-    int a;
-    scanf("%d",&a);
+    int c;
+    scanf("%d",&c);
     
-    if (a >= 100 && a <= 999)
+    if (c >= 100 && c <= 999)
     {
         printf(" Three-digit number");
     }
