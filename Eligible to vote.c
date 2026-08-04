@@ -1,10 +1,10 @@
 #include <stdio.h>
 int main()
 {
-    int a;
-    scanf("%d",&a);
+    int num;
+    scanf("%d",&num);
     
-    if (a >= 18)
+    if (num >= 18)
     {
         printf("Eligible to vote");
     }
