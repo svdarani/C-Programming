@@ -7,17 +7,17 @@ int main() {
 
     scanf("%d", &N);
 
-    temp = N;
-    while(temp > 0) {
+    t = N;
+    while(t > 0) {
         digits++;
-        temp = temp / 10;
+        t = t / 10;
     }
 
-    temp = N;  
-    while(temp > 0) {
-        digit = temp % 10;          
+    t = N;  
+    while(t > 0) {
+        digit = t % 10;          
         sum = sum + pow(digit, digits);         
-        temp = temp / 10;                   
+        t = t / 10;                   
     }
 
     if(sum == N) {
