@@ -1,8 +1,8 @@
 #include <stdio.h>
 int main()
 {
-    int a = 25;
-    float b = a;
-    printf ("%.1f", b);
+    int A = 25;
+    float B = A;
+    printf ("%.1f", B);
       return 0;
 }
