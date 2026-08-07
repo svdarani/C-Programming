@@ -1,11 +1,11 @@
 #include <stdio.h>
 int main()
 {
-    int a;
+    int A;
     printf("Enter the number: ");
-    scanf("%d",&a);
+    scanf("%d",&A);
     
-    if (a%5==0)
+    if (A%5==0)
     {
         printf("Divisible by 5");
     }
