@@ -1,9 +1,9 @@
 #include <stdio.h>
 int main()
 {
-    int a,b;
-    a=8;
-    b=4;
-    printf ("%d", a/b);
+    int X,Y;
+    X=8;
+    Y=4;
+    printf ("%d", X/Y);
       return 0;
 }
