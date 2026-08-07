@@ -1,15 +1,15 @@
 #include <stdio.h>
 int main()
 {
-    int a;
+    int A;
     printf("Enter the number: ");
-    scanf("%d",&a);
+    scanf("%d",&A);
     
-    if (a%2==0)
+    if (A%2==0)
     {
         printf("Its an even number");
     }
-    else if (a%2!=0){
+    else if (A%2!=0){
         printf("Its an odd number");
     }
     
