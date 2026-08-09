@@ -4,7 +4,7 @@ int main()
     char ch;
     scanf("%c",&ch);
     
-    if (ch=='A'&& ch=='Z'||ch=='a'&& ch=='z')
+    if (ch=='a'&& ch=='z'||ch=='A'&& ch=='Z')
     {
         printf("Alphabet");
     }
@@ -12,7 +12,7 @@ int main()
         printf("Digit");
     }
     else 
-    printf("Special Character");
+    printf("Special character");
     
     return 0;
 }
