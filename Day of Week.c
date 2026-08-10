@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 int main() {
-    int day;
+    int Day;
    printf("Enter the number: ");
-    scanf("%d",&day);
-    switch(day){
+    scanf("%d",&Day);
+    switch(Day){
         case 1 : printf("Monday"); break;
         case 2 : printf("Tuesday"); break;
         case 3 : printf("Wednesday"); break;
